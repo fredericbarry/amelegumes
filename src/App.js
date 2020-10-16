@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Hero from "./Hero/index.js";
+import Hero from "./components/Hero/Hero";
 
 class App extends Component {
   render() {
