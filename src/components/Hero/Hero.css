@@ -9,11 +9,10 @@
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
   justify-content: center;
   min-height: 100vh;
-
-  /* https://stackoverflow.com/questions/51795887/how-to-make-body-take-100-min-height-and-height-as-auto/51796359 */
-  /* overflow: auto; */
+  overflow: hidden;
 }
 
 .header {
