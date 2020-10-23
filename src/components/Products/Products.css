@@ -1,0 +1,7 @@
+#products {
+  display: grid;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  padding: 0.8rem;
+}
