@@ -5,15 +5,12 @@
 
 #hero {
   align-items: center;
-  background: url("background.jpg") no-repeat center center fixed;
+  background: url("background-mobile.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   min-height: 100vh;
-
-  /* https://stackoverflow.com/questions/51795887/how-to-make-body-take-100-min-height-and-height-as-auto/51796359 */
-  /* overflow: auto; */
 }
 
 .header {
@@ -27,7 +24,16 @@ h1 {
   font-size: 3em;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-image: url("background-tablet.jpg");
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    background-image: url("background-desktop.jpg");
+  }
   h1 {
     font-size: 5em;
   }
