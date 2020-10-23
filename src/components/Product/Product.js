@@ -9,8 +9,10 @@ class Product extends Component {
           alt={this.props.name}
           src={process.env.PUBLIC_URL + "/images/products/" + this.props.image}
         />
-        <h2>{this.props.name}</h2>
-        {/* <span>{this.props.description}</span> */}
+        <div className="details">
+          <h2>{this.props.name}</h2>
+          {/* <span>{this.props.description}</span> */}
+        </div>
       </div>
     );
   }
