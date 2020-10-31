@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-import "./Hero.css";
+import { Container } from "@material-ui/core";
+//import "./Hero.css";
 
 class Hero extends Component {
   render() {
     return (
-      <div id="hero">
-        <div className="header">
-          <h1>Amélégumes</h1>
-        </div>
-      </div>
+      <Container disableGutters>
+        <img
+          alt="Amélégumes"
+          srcset=""
+          sizes=""
+          src={process.env.PUBLIC_URL + "/images/background-desktop.jpg"}
+        />
+      </Container>
     );
   }
 }

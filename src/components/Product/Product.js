@@ -1,16 +1,23 @@
 import React, { Component } from "react";
-import "./Product.css";
+import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 
 class Product extends Component {
   render() {
     return (
-      <div className="product">
-        <img
+      <Card raised>
+        <CardMedia
+          component="img"
           alt={this.props.name}
-          src={process.env.PUBLIC_URL + "/images/products/" + this.props.image}
+          image={
+            process.env.PUBLIC_URL + "/images/products/" + this.props.image
+          }
         />
-        <h2>{this.props.name}</h2>
-      </div>
+        <CardContent>
+          <Typography component="h2" variant="h6" color="primary">
+            {this.props.name}
+          </Typography>
+        </CardContent>
+      </Card>
     );
   }
 }

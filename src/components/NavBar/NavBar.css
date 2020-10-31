@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "QwertyAbility";
+  src: url("QwertyAbility.otf") format("opentype");
+}
+
+#appTitle {
+  font-family: "QwertyAbility", cursive;
+  font-size: 2.5rem;
+}
