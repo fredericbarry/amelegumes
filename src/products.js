@@ -269,4 +269,12 @@ export const products = [
     image: "waltham-butternut.jpg",
     isFavorite: false,
   },
+  {
+    id: 36,
+    name: "Blush",
+    category: "tomato",
+    image: "blush.jpg",
+    isDeterminate: false,
+    isFavorite: false,
+  },
 ];
