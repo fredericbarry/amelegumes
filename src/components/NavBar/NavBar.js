@@ -8,9 +8,7 @@ class NavBar extends Component {
       <>
         <AppBar>
           <Toolbar>
-            <Typography component="h1" id="appTitle">
-              Amélégumes
-            </Typography>
+            <Typography id="navBarTitle">Amélégumes</Typography>
           </Toolbar>
         </AppBar>
         <Toolbar />

@@ -9,9 +9,8 @@ class Products extends Component {
         <Grid container spacing={1}>
           {this.props.products.map((product, i) => {
             return (
-              <Grid item xs={12} sm={6} md={4} lg={3} xl={1}>
+              <Grid item key={i} xs={12} sm={6} md={4} lg={3} xl={1}>
                 <Product
-                  key={i}
                   name={this.props.products[i].name}
                   image={this.props.products[i].image}
                   description={this.props.products[i].description}

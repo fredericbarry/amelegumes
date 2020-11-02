@@ -1,4 +1,4 @@
-#hero {
+#heroContainer {
   align-items: center;
   background-attachment: fixed;
   background-position: center center;
@@ -11,36 +11,56 @@
   overflow: hidden;
 }
 
-.header {
+#heroBox {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 1em;
   padding: 1em;
+  text-align: center;
 }
 
-h1 {
-  font-size: 3em;
+#heroTitle {
+  font-family: "QwertyAbility", cursive;
+  font-size: 5em;
+  letter-spacing: 0;
+}
+
+#heroDescription {
+  font-size: 1em;
+}
+
+/**
+ * iOS devices
+ * https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
+ */
+@supports (-webkit-touch-callout: none) {
+  #heroContainer {
+    background-attachment: scroll;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  #hero {
-    background-image: url("background-mobile.jpg");
+  #heroContainer {
+    background-image: url("./images/background-mobile.jpg");
   }
 }
 
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  #hero {
-    background-image: url("background-tablet.jpg");
+  #heroContainer {
+    background-image: url("./images/background-tablet.jpg");
+  }
+  #heroBox {
+    font-size: 150%;
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-  #hero {
-    background-image: url("background-desktop.jpg");
+  #heroContainer {
+    background-image: url("./images/background-desktop.jpg");
   }
-  h1 {
-    font-size: 5em;
+  #heroBox {
+    font-size: 200%;
   }
 }

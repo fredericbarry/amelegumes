@@ -1,9 +1,5 @@
-@font-face {
-  font-family: "QwertyAbility";
-  src: url("QwertyAbility.otf") format("opentype");
-}
-
-#appTitle {
+#navBarTitle {
   font-family: "QwertyAbility", cursive;
   font-size: 2.5rem;
+  letter-spacing: 0;
 }
