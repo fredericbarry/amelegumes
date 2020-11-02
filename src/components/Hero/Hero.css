@@ -41,14 +41,14 @@
 /* Mobile */
 @media screen and (max-width: 480px) {
   #heroContainer {
-    background-image: url("./images/background-mobile.jpg");
+    background-image: url("../../images/background-mobile.jpg");
   }
 }
 
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   #heroContainer {
-    background-image: url("./images/background-tablet.jpg");
+    background-image: url("../../images/background-tablet.jpg");
   }
   #heroBox {
     font-size: 150%;
@@ -58,7 +58,7 @@
 /* Desktop */
 @media screen and (min-width: 1025px) {
   #heroContainer {
-    background-image: url("./images/background-desktop.jpg");
+    background-image: url("../../images/background-desktop.jpg");
   }
   #heroBox {
     font-size: 200%;
