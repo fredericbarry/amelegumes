@@ -4,7 +4,7 @@ import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 class Product extends Component {
   render() {
     return (
-      <Card raised>
+      <Card>
         <CardMedia
           component="img"
           alt={this.props.name}
