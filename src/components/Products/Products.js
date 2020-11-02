@@ -5,8 +5,8 @@ import Product from "../Product/Product";
 class Products extends Component {
   render() {
     return (
-      <Box m={2}>
-        <Grid container justify="space-evenly" spacing={2}>
+      <Box p={2}>
+        <Grid container spacing={1}>
           {this.props.products.map((product, i) => {
             return (
               <Grid item xs={12} sm={6} md={4} lg={3} xl={1}>
