@@ -6,6 +6,8 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import "fontsource-roboto";
 
+import "./index.css";
+
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
