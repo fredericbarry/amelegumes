@@ -48,7 +48,7 @@ export const products = [
     isFavorite: false,
   },
   {
-    id: 6,
+    id: 7,
     name: "Black Cherry",
     category: "tomatoes",
     image: "black-cherry.jpg",
@@ -270,7 +270,7 @@ export const products = [
     isFavorite: false,
   },
   {
-    id: 36,
+    id: 37,
     name: "Blush",
     category: "tomato",
     image: "blush.jpg",
