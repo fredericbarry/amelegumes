@@ -1,18 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import "./Navbar.css";
+import "./NavBar.css";
 
-const Navbar = () => {
-  return (
-    <>
-      <AppBar>
-        <Toolbar>
-          <Typography id="navbarTitle">Amélégumes</Typography>
-        </Toolbar>
-      </AppBar>
-      <Toolbar />
-    </>
-  );
-};
+class NavBar extends Component {
+  render() {
+    return (
+      <>
+        <AppBar>
+          <Toolbar>
+            <Typography id="navBarTitle">Amélégumes</Typography>
+          </Toolbar>
+        </AppBar>
+        <Toolbar />
+      </>
+    );
+  }
+}
 
-export default Navbar;
+export default NavBar;
