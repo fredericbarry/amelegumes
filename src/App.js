@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Hero from "./components/Hero/Hero";
-import NavBar from "./components/NavBar/NavBar";
+import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
 import { products } from "./products";
 
@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <Navbar />
         <Hero />
         <Products products={products} />
       </>
