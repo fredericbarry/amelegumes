@@ -8,7 +8,7 @@ const Products = ({ products }) => {
       <Grid container spacing={1}>
         {products.map((product, i) => {
           return (
-            <Grid item key={i} xs={12} sm={6} md={4} lg={3} xl={1}>
+            <Grid item key={products[i].id} xs={12} sm={6} md={4} lg={3} xl={1}>
               <Product
                 name={products[i].name}
                 image={products[i].image}
