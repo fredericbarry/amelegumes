@@ -1,19 +1,17 @@
 import React from "react";
-import { Container, Typography } from "@material-ui/core";
+
 import "./Hero.css";
 
 const Hero = () => {
   return (
-    <Container id="heroContainer">
-      <div id="heroBox">
-        <Typography variant="h1" id="heroTitle">
-          Amélégumes
-        </Typography>
-        <Typography id="heroDescription">
+    <section className="HeroContainer">
+      <div className="HeroContent">
+        <div className="HeroTitle">Amélégumes</div>
+        <div className="HeroDescription">
           Les légumes les plus Amélicieux qui soient
-        </Typography>
+        </div>
       </div>
-    </Container>
+    </section>
   );
 };
 
