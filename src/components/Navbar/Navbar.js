@@ -1,17 +1,22 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <>
-      <AppBar>
-        <Toolbar>
-          <Typography id="navbarTitle">Amélégumes</Typography>
-        </Toolbar>
-      </AppBar>
-      <Toolbar />
-    </>
+    <header>
+      <div className="navbarTitle">Amélégumes</div>
+      {/* <nav>
+        <ul>
+          <li>
+            <a href="#">Produits</a>
+          </li>
+          <li>
+            <a href="#">A Propos</a>
+          </li>
+        </ul>
+      </nav> */}
+    </header>
   );
 };
 
