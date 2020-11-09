@@ -41,11 +41,6 @@ nav li a {
 }
 
 .navbarTitle {
-  /* Margins and paddings */
   margin-left: 0.5em;
-
-  /* Text */
-  font-family: "QwertyAbility", "URW Chancery L", "Brush Script MT",
-    "Brush Script Std", "Snell Roundhand", "Bradley Hand", cursive;
   font-size: 2.5rem;
 }
