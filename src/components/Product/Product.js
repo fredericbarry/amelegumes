@@ -1,20 +1,19 @@
 import React from "react";
-import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
+
+import "./Product.css";
 
 const Product = ({ name, image }) => {
   return (
-    <Card>
-      <CardMedia
-        component="img"
+    <div className="ProductContainer">
+      <img
+        className="ProductImage"
         alt={name}
-        image={process.env.PUBLIC_URL + "/images/products/" + image}
+        src={process.env.PUBLIC_URL + "/images/products/" + image}
       />
-      <CardContent>
-        <Typography component="h2" variant="h6" color="primary">
-          {name}
-        </Typography>
-      </CardContent>
-    </Card>
+      <div className="ProductContent">
+        <h2>{name}</h2>
+      </div>
+    </div>
   );
 };
 
