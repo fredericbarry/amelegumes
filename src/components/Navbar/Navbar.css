@@ -1,5 +1,51 @@
-#navbarTitle {
-  font-family: "QwertyAbility", cursive;
+header {
+  /* Background */
+  background-color: #009688;
+
+  /* Dimension */
+  height: 64px;
+
+  /* Flexbox */
+  align-items: center;
+  display: flex;
+
+  /* Position */
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  /* Shadow */
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  /* Text */
+  color: #ffffff;
+}
+
+header * {
+  display: inline;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav li {
+  margin: 20px;
+}
+
+nav li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbarTitle {
+  /* Margins and paddings */
+  margin-left: 0.5em;
+
+  /* Text */
+  font-family: "QwertyAbility", "URW Chancery L", "Brush Script MT",
+    "Brush Script Std", "Snell Roundhand", "Bradley Hand", cursive;
   font-size: 2.5rem;
-  letter-spacing: 0;
 }
