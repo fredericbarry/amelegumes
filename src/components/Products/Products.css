@@ -1,0 +1,9 @@
+.ProductsSection {
+  padding: 1rem;
+}
+
+.ProductsGrid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
