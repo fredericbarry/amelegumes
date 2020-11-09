@@ -1,4 +1,4 @@
-.HeroContainer {
+.HeroSection {
   /* Background */
   background-attachment: fixed;
   background-color: #c84e28;
@@ -29,7 +29,7 @@
   padding: 1em;
 }
 
-.HeroTitle {
+.HeroLogo {
   font-size: 4rem;
   line-height: 1.2;
 }
@@ -42,18 +42,18 @@
 https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
 */
 @supports (-webkit-touch-callout: none) {
-  .HeroContainer {
+  .HeroSection {
     background-attachment: scroll;
   }
 }
 
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  .HeroContainer {
+  .HeroSection {
     background-image: url("./images/background-tablet.jpg");
   }
 
-  .HeroTitle {
+  .HeroLogo {
     font-size: 6rem;
   }
 
@@ -64,11 +64,11 @@ https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-  .HeroContainer {
+  .HeroSection {
     background-image: url("./images/background-desktop.jpg");
   }
 
-  .HeroTitle {
+  .HeroLogo {
     font-size: 8rem;
   }
 

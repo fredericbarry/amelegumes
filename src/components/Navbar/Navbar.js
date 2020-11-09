@@ -6,9 +6,9 @@ import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   return (
-    <header>
-      <Logo className="navbarTitle" />
-      {/* <nav>
+    <header className="NavbarSection">
+      <Logo className="NavbarLogo" />
+      {/* <nav className="NavbarNav">
         <ul>
           <li>
             <a href="#">Produits</a>

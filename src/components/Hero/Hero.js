@@ -6,9 +6,9 @@ import Logo from "../Logo/Logo";
 
 const Hero = () => {
   return (
-    <section className="HeroContainer">
+    <section className="HeroSection">
       <div className="HeroContent">
-        <Logo className="HeroTitle" />
+        <Logo className="HeroLogo" />
         <div className="HeroDescription">
           Les légumes les plus Amélicieux qui soient
         </div>

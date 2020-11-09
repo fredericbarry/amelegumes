@@ -1,8 +1,8 @@
-header {
-  /* Background */
+.NavbarSection {
   background-color: #009688;
-
-  /* Dimension */
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
   height: 64px;
 
   /* Flexbox */
@@ -14,33 +14,26 @@ header {
   left: 0;
   right: 0;
   top: 0;
-
-  /* Shadow */
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-
-  /* Text */
-  color: #ffffff;
 }
 
-header * {
+.NavbarSection * {
   display: inline;
 }
 
-nav {
+.NavbarLogo {
+  margin-left: 0.5em;
+  font-size: 2.5rem;
+}
+
+.NavbarNav {
   margin-left: auto;
 }
 
-nav li {
+.NavbarNav li {
   margin: 20px;
 }
 
-nav li a {
+.NavbarNav li a {
   color: #ffffff;
   text-decoration: none;
-}
-
-.navbarTitle {
-  margin-left: 0.5em;
-  font-size: 2.5rem;
 }
