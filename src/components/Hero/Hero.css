@@ -1,10 +1,8 @@
-/* Based on https://codetheweb.blog/fullscreen-image-hero/ */
-
 .HeroContainer {
   /* Background */
   background-attachment: fixed;
   background-color: #c84e28;
-  background-image: url("../../images/background-mobile.jpg");
+  background-image: url("./images/background-mobile.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,35 +24,25 @@
 }
 
 .HeroContent {
-  /* Background */
   background-color: rgba(255, 255, 255, 0.5);
-
-  /* Border */
   border-radius: 1em;
-
-  /* Padding */
   padding: 1em;
 }
 
 .HeroTitle {
-  /* Text */
-  font-family: "QwertyAbility", cursive;
   font-size: 4rem;
   line-height: 1.2;
 }
 
 .HeroDescription {
-  /* Text */
   font-size: 0.8rem;
 }
 
-/**
- * iOS devices
- * https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
- */
+/* iOS devices
+https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
+*/
 @supports (-webkit-touch-callout: none) {
   .HeroContainer {
-    /* Background */
     background-attachment: scroll;
   }
 }
@@ -62,35 +50,29 @@
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .HeroContainer {
-    /* Background */
-    background-image: url("../../images/background-tablet.jpg");
+    background-image: url("./images/background-tablet.jpg");
   }
 
   .HeroTitle {
-    /* Text */
     font-size: 6rem;
   }
 
   .HeroDescription {
-    /* Text */
     font-size: 1.2rem;
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-  /* Background */
   .HeroContainer {
-    background-image: url("../../images/background-desktop.jpg");
+    background-image: url("./images/background-desktop.jpg");
   }
 
   .HeroTitle {
-    /* Text */
     font-size: 8rem;
   }
 
   .HeroDescription {
-    /* Text */
     font-size: 1.6rem;
   }
 }

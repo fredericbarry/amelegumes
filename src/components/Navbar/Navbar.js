@@ -2,10 +2,12 @@ import React from "react";
 
 import "./Navbar.css";
 
+import Logo from "../Logo/Logo";
+
 const Navbar = () => {
   return (
     <header>
-      <div className="navbarTitle">Amélégumes</div>
+      <Logo className="navbarTitle" />
       {/* <nav>
         <ul>
           <li>
