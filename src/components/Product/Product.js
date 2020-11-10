@@ -11,7 +11,7 @@ const Product = ({ name, image }) => {
         src={process.env.PUBLIC_URL + "/images/products/" + image}
       />
       <div className="ProductContent">
-        <h2>{name}</h2>
+        <h2 className="ProductName">{name}</h2>
       </div>
     </div>
   );
