@@ -14,6 +14,8 @@
   left: 0;
   right: 0;
   top: 0;
+
+  padding: 0 1em;
 }
 
 .NavbarSection * {
@@ -21,7 +23,6 @@
 }
 
 .NavbarLogo {
-  margin-left: 0.5em;
   font-size: 2.5rem;
 }
 

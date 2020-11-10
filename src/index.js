@@ -1,28 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { amber, teal } from "@material-ui/core/colors";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
-import "fontsource-roboto";
+import "fontsource-roboto/400-normal.css";
+
+import "./index.css";
 
 import App from "./App";
 
 import * as serviceWorker from "./serviceWorker";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: teal,
-    secondary: amber,
-  },
-});
-
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
