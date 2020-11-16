@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Product.css";
 
-const Product = ({ name, image }) => {
+const Product = ({ name, category, image }) => {
   return (
     <div className="ProductContainer">
       <img
@@ -12,6 +12,9 @@ const Product = ({ name, image }) => {
       />
       <div className="ProductContent">
         <h2 className="ProductName">{name}</h2>
+      </div>
+      <div className="ProductActions">
+        <div className="ProductCategory">{category}</div>
       </div>
     </div>
   );
