@@ -36,6 +36,7 @@
 .ProductActions {
   align-items: center;
   display: flex;
+  display: none;
   padding: 16px;
 }
 
