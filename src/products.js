@@ -272,7 +272,7 @@ export const products = [
   {
     id: 37,
     name: "Tomate Blush",
-    category: "tomato",
+    category: "tomatoes",
     image: "blush.jpg",
     isDeterminate: false,
     isFavorite: false,
@@ -280,21 +280,21 @@ export const products = [
   {
     id: 38,
     name: "Tomatillo Rio Grande Verde",
-    category: "tomatillo",
+    category: "tomatillos",
     image: "rio-grande-verde-tomatillo.jpg",
     isFavorite: false,
   },
   {
     id: 39,
     name: "Tomatillo Mauve",
-    category: "tomatillo",
+    category: "tomatillos",
     image: "purple-tomatillo.jpg",
     isFavorite: false,
   },
   {
     id: 40,
     name: "Aubergine Patio Baby",
-    category: "eggplant",
+    category: "eggplants",
     image: "patio-baby-eggplant.jpg",
     isFavorite: false,
   },
