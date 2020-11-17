@@ -2,20 +2,31 @@ import React from "react";
 
 import "./Product.css";
 
-const Product = ({ name, category, image, description }) => {
+const Product = ({ name, image, price, description }) => {
+  const priceUnit = price?.unit ? (
+    <div className="priceUnit">{price.unit}$ ch.</div>
+  ) : (
+    ""
+  );
+
+  const priceHalfDozen = price?.halfDozen ? (
+    <div className="priceHalfDozen">6 pour {price.halfDozen}$</div>
+  ) : (
+    ""
+  );
+
   return (
-    <div className="ProductContainer">
+    <div className="productContainer">
       <img
-        className="ProductImage"
+        className="productImage"
         alt={name}
         src={process.env.PUBLIC_URL + "/images/products/" + image}
       />
-      <div className="ProductContent">
-        <h2 className="ProductName">{name}</h2>
-        <p>{description}</p>
-      </div>
-      <div className="ProductActions">
-        <div className="ProductCategory">{category}</div>
+      <h2 className="productName">{name}</h2>
+      <p className="productDescription">{description}</p>
+      <div className="cardMeta">
+        {priceUnit}
+        {priceHalfDozen}
       </div>
     </div>
   );
