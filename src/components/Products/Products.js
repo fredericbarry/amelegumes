@@ -13,8 +13,8 @@ const Products = ({ products }) => {
             <Product
               key={products[i].id}
               name={products[i].name}
-              category={products[i].category}
               image={products[i].image}
+              price={products[i].price}
               description={products[i].description}
             />
           );
