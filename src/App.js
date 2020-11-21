@@ -25,18 +25,15 @@ class App extends Component {
   };
 
   render() {
-    /* const groupedProducts = this.groupBy(
+    const groupedProducts = this.groupBy(
       this.state.products.sort((a, b) => (a.name > b.name ? 1 : -1)),
       "category"
-    ); */
-    const groupedProducts = this.state.products.sort((a, b) =>
-      a.name > b.name ? 1 : -1
     );
     return (
       <>
         <Navbar />
         <Hero />
-        <Products products={groupedProducts} />
+        <Products categories={groupedProducts} />
       </>
     );
   }
