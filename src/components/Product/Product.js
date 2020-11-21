@@ -4,13 +4,16 @@ import "./Product.css";
 
 const Product = ({ name, image, price, description }) => {
   const priceUnit = price?.unit ? (
-    <div className="priceUnit">{price.unit}$ ch.</div>
+    <span className="priceUnit">{price.unit}$ ch.</span>
   ) : (
     ""
   );
 
   const priceHalfDozen = price?.halfDozen ? (
-    <div className="priceHalfDozen">6 pour {price.halfDozen}$</div>
+    <>
+      <span> ou </span>
+      <span className="priceHalfDozen">6 pour {price.halfDozen}$</span>
+    </>
   ) : (
     ""
   );
@@ -25,8 +28,10 @@ const Product = ({ name, image, price, description }) => {
       <h2 className="productName">{name}</h2>
       <p className="productDescription">{description}</p>
       <div className="cardMeta">
-        {priceUnit}
-        {priceHalfDozen}
+        <div className="productPricing">
+          Semis : {priceUnit}
+          {priceHalfDozen}
+        </div>
       </div>
     </div>
   );
