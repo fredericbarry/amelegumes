@@ -41,14 +41,12 @@
   display: inline-flex;
 }
 
-.priceUnit,
-.priceHalfDozen {
+.productPricing {
   border: 1px solid #e0e0e0; /* Alto */
-  border-radius: 16px;
+  border-radius: 4px;
   color: rgba(0, 0, 0, 0.87);
   cursor: default;
   font-size: 0.8125rem;
-  margin-right: 8px;
   padding: 4px 8px;
   vertical-align: middle;
 }
