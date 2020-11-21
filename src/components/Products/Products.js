@@ -4,20 +4,22 @@ import "./Products.css";
 
 import Product from "../Product/Product";
 
-const Products = ({ products }) => {
+const Products = ({ categories }) => {
   return (
     <section className="ProductsSection">
       <div className="ProductsGrid">
-        {products.map((product, i) => {
-          return (
-            <Product
-              key={products[i].id}
-              name={products[i].name}
-              image={products[i].image}
-              price={products[i].price}
-              description={products[i].description}
-            />
-          );
+        {Object.entries(categories).map(([category, products]) => {
+          return products.map((product) => {
+            return (
+              <Product
+                key={product.id}
+                name={product.name}
+                image={product.image}
+                price={product.price}
+                description={product.description}
+              />
+            );
+          });
         })}
       </div>
     </section>
