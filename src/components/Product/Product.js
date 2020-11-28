@@ -23,7 +23,7 @@ const Product = ({ name, image, price, description }) => {
       <img
         className="productImage"
         alt={name}
-        src={process.env.PUBLIC_URL + "/images/products/" + image}
+        src={process.env.PUBLIC_URL + "/assets/products/" + image}
       />
       <h2 className="productName">{name}</h2>
       <p className="productDescription">{description}</p>
