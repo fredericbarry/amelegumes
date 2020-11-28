@@ -1,0 +1,22 @@
+.SearchBoxSection {
+  background-color: #009688;
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBox {
+  border: 1px solid #e0e0e0; /* Alto */
+  border-radius: 4px;
+  font-size: 1.25rem;
+  margin: 1em;
+  padding: 16px;
+}
+
+.SearchBox::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.SearchBox:focus {
+  color: rgba(0, 0, 0, 0.87);
+  outline: none;
+}
