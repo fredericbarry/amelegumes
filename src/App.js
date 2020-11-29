@@ -5,15 +5,22 @@ import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
 import SearchBox from "./components/SearchBox/SearchBox";
 
-import { products } from "./products";
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      products: products,
+      products: [],
       searchfield: "",
     };
+  }
+
+  componentDidMount() {
+    /* this.setState({ products: products }); */
+    fetch(
+      "https://gist.githubusercontent.com/fredericbarry/d65a89257da4ab93c9b81b19e68f3729/raw/532bc7770c2e550be7801d1ad0763f6064e31a40/products.json"
+    )
+      .then((response) => response.json())
+      .then((products) => this.setState({ products: products }));
   }
 
   /*
@@ -46,6 +53,9 @@ class App extends Component {
           .toLowerCase()
           .includes(this.state.searchfield.toLowerCase());
       });
+    /* if (this.state.products.length === 0) {
+      return <>down</>;
+    } else { */
     return (
       <>
         <Navbar />
@@ -54,6 +64,7 @@ class App extends Component {
         <Products products={filteredProducts} />
       </>
     );
+    /* } */
   }
 }
 
