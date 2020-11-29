@@ -24,18 +24,6 @@ class App extends Component {
       .then((products) => this.setState({ products: products }));
   }
 
-  /*
-  groupBy = (objectArray, property) => {
-    return objectArray.reduce((result, currentValue) => {
-      // Create an empty array if one does not already exists for the `property` then push the `currentValue` in it.
-      (result[currentValue[property]] =
-        result[currentValue[property]] || []).push(currentValue);
-      // Return the current `result` iteration value that will serve as the next `result` iteration value
-      return result;
-    }, {}); // Empty object is the initial value for `result` object
-  };
-  */
-
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });
   };
