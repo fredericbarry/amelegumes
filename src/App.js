@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Hero from "./components/Hero/Hero";
+import Loader from "./components/Loader/Loader";
 import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
 import SearchBox from "./components/SearchBox/SearchBox";
@@ -40,7 +41,8 @@ class App extends Component {
   };
 
   render() {
-    const filteredProducts = this.state.products
+    const { products, searchfield } = this.state;
+    const filteredProducts = products
       .sort((a, b) => {
         // If category is the same then sort by name
         if (a.category === b.category) {
@@ -49,22 +51,22 @@ class App extends Component {
         return a.category > b.category ? 1 : -1;
       })
       .filter((product) => {
-        return product.name
-          .toLowerCase()
-          .includes(this.state.searchfield.toLowerCase());
+        return product.name.toLowerCase().includes(searchfield.toLowerCase());
       });
-    /* if (this.state.products.length === 0) {
-      return <>down</>;
-    } else { */
     return (
       <>
         <Navbar />
         <Hero />
-        <SearchBox searchChange={this.onSearchChange} />
-        <Products products={filteredProducts} />
+        {!products.length ? (
+          <Loader />
+        ) : (
+          <>
+            <SearchBox searchChange={this.onSearchChange} />
+            <Products products={filteredProducts} />
+          </>
+        )}
       </>
     );
-    /* } */
   }
 }
 
