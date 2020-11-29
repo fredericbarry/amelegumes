@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-    /* this.setState({ products: products }); */
     fetch(
       "https://gist.githubusercontent.com/fredericbarry/d65a89257da4ab93c9b81b19e68f3729/raw/532bc7770c2e550be7801d1ad0763f6064e31a40/products.json"
     )
