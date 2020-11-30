@@ -47,7 +47,7 @@ class App extends Component {
           <Logo className="NavBarLogo" />
           <SearchBox searchChange={this.onSearchChange} />
         </NavBar>
-        <Hero />
+        {!searchfield.length ? <Hero /> : <></>}
         {!products.length ? (
           <Loader />
         ) : (
