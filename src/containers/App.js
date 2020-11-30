@@ -45,15 +45,13 @@ class App extends Component {
       <>
         <NavBar>
           <Logo className="NavBarLogo" />
+          <SearchBox searchChange={this.onSearchChange} />
         </NavBar>
         <Hero />
         {!products.length ? (
           <Loader />
         ) : (
-          <>
-            <SearchBox searchChange={this.onSearchChange} />
-            <Products products={filteredProducts} />
-          </>
+          <Products products={filteredProducts} />
         )}
       </>
     );
