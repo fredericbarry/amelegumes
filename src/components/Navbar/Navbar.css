@@ -8,6 +8,7 @@
   /* Flexbox */
   align-items: center;
   display: flex;
+  justify-content: space-between;
 
   /* Position */
   position: fixed;
@@ -16,10 +17,6 @@
   top: 0;
 
   padding: 0 1em;
-}
-
-.NavBar * {
-  display: inline;
 }
 
 .NavBarLogo {
