@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
-import Navbar from "../components/NavBar/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
 
@@ -42,7 +42,7 @@ class App extends Component {
       });
     return (
       <>
-        <Navbar />
+        <NavBar />
         <Hero />
         {!products.length ? (
           <Loader />
