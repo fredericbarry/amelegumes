@@ -2,14 +2,8 @@ import React from "react";
 
 import "./NavBar.css";
 
-import Logo from "../Logo/Logo";
-
-const Navbar = () => {
-  return (
-    <header className="NavbarSection">
-      <Logo className="NavbarLogo" />
-    </header>
-  );
+const NavBar = (props) => {
+  return <nav className="NavBar">{props.children}</nav>;
 };
 
-export default Navbar;
+export default NavBar;

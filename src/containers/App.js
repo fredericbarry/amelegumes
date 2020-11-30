@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
+import Logo from "../components/Logo/Logo";
 import NavBar from "../components/NavBar/NavBar";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
@@ -42,7 +43,9 @@ class App extends Component {
       });
     return (
       <>
-        <NavBar />
+        <NavBar>
+          <Logo className="NavBarLogo" />
+        </NavBar>
         <Hero />
         {!products.length ? (
           <Loader />
