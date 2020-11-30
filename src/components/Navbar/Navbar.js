@@ -8,16 +8,6 @@ const Navbar = () => {
   return (
     <header className="NavbarSection">
       <Logo className="NavbarLogo" />
-      {/* <nav className="NavbarNav">
-        <ul>
-          <li>
-            <a href="#">Produits</a>
-          </li>
-          <li>
-            <a href="#">A Propos</a>
-          </li>
-        </ul>
-      </nav> */}
     </header>
   );
 };

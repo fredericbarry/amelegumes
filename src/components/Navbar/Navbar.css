@@ -23,18 +23,5 @@
 }
 
 .NavbarLogo {
-  font-size: 2.5rem;
-}
-
-.NavbarNav {
-  margin-left: auto;
-}
-
-.NavbarNav li {
-  margin: 20px;
-}
-
-.NavbarNav li a {
-  color: white;
-  text-decoration: none;
+  /*  font-size: 2.5rem; */
 }
