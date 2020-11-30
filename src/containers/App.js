@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Hero from "./components/Hero/Hero";
-import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar/Navbar";
-import Products from "./components/Products/Products";
-import SearchBox from "./components/SearchBox/SearchBox";
+import Hero from "../components/Hero/Hero";
+import Loader from "../components/Loader/Loader";
+import Navbar from "../components/Navbar/Navbar";
+import Products from "../components/Products/Products";
+import SearchBox from "../components/SearchBox/SearchBox";
 
 class App extends Component {
   constructor() {

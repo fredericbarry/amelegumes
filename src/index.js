@@ -5,7 +5,7 @@ import "fontsource-roboto/400-normal.css";
 
 import "./index.css";
 
-import App from "./App";
+import App from "./containers/App";
 
 import * as serviceWorker from "./serviceWorker";
 
