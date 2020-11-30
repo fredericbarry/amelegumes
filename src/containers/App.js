@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Hero from "./components/Hero/Hero";
-import Loader from "./components/Loader/Loader";
-import Navbar from "./components/Navbar/Navbar";
-import Products from "./components/Products/Products";
-import SearchBox from "./components/SearchBox/SearchBox";
+import Hero from "../components/Hero/Hero";
+import Loader from "../components/Loader/Loader";
+import Navbar from "../components/Navbar/Navbar";
+import Products from "../components/Products/Products";
+import SearchBox from "../components/SearchBox/SearchBox";
 
 class App extends Component {
   constructor() {
@@ -16,25 +16,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    /* this.setState({ products: products }); */
     fetch(
       "https://gist.githubusercontent.com/fredericbarry/d65a89257da4ab93c9b81b19e68f3729/raw/532bc7770c2e550be7801d1ad0763f6064e31a40/products.json"
     )
       .then((response) => response.json())
       .then((products) => this.setState({ products: products }));
   }
-
-  /*
-  groupBy = (objectArray, property) => {
-    return objectArray.reduce((result, currentValue) => {
-      // Create an empty array if one does not already exists for the `property` then push the `currentValue` in it.
-      (result[currentValue[property]] =
-        result[currentValue[property]] || []).push(currentValue);
-      // Return the current `result` iteration value that will serve as the next `result` iteration value
-      return result;
-    }, {}); // Empty object is the initial value for `result` object
-  };
-  */
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value });

@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fafafa; /* Cultured */
   color: rgba(0, 0, 0, 0.87);
 
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -29,5 +29,5 @@ body {
 }
 
 body::backdrop {
-  background-color: #fafafa;
+  background-color: #fafafa; /* Cultured */
 }
