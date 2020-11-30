@@ -1,7 +1,7 @@
 .HeroSection {
   /* Background */
   background-attachment: fixed;
-  background-color: #c84e28;
+  background-color: #c84e28; /* Sinopia */
   background-image: url("./images/background-mobile.jpg");
   background-position: center center;
   background-repeat: no-repeat;
