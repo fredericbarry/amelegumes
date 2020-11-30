@@ -19,6 +19,10 @@
   padding: 0 1em;
 }
 
+.NavBarPadding {
+  padding-top: 64px;
+}
+
 .NavBarLogo {
   font-size: 2.5rem;
 }
