@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
-import Navbar from "../components/Navbar/Navbar";
+import Logo from "../components/Logo/Logo";
+import NavBar from "../components/NavBar/NavBar";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
 
@@ -42,15 +43,15 @@ class App extends Component {
       });
     return (
       <>
-        <Navbar />
-        <Hero />
+        <NavBar>
+          <Logo className="NavBarLogo" />
+          <SearchBox searchChange={this.onSearchChange} />
+        </NavBar>
+        {!searchfield.length ? <Hero /> : <></>}
         {!products.length ? (
           <Loader />
         ) : (
-          <>
-            <SearchBox searchChange={this.onSearchChange} />
-            <Products products={filteredProducts} />
-          </>
+          <Products products={filteredProducts} />
         )}
       </>
     );
