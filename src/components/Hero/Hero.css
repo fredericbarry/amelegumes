@@ -16,7 +16,7 @@
   padding: 1em;
 
   /* Sizing */
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   overflow: hidden;
 
   /* Text */
