@@ -9,7 +9,8 @@
   font-size: 1.25rem;
   padding: 4px;
 
-  width: 150px;
+  width: 300px;
+  max-width: 50%;
 }
 
 .SearchBox::placeholder {
@@ -19,11 +20,4 @@
 .SearchBox:focus {
   color: rgba(0, 0, 0, 0.87);
   outline: none;
-}
-
-/* Tablet and Desktop */
-@media screen and (min-width: 481px) {
-  .SearchBox {
-    width: 300px;
-  }
 }
