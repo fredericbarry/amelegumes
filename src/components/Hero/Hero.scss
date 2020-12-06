@@ -52,7 +52,7 @@ https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-
   .hero {
     background-image: url("./images/background-tablet.jpg");
 
-    .logo {
+    .brand {
       font-size: 6rem;
     }
 
@@ -67,12 +67,12 @@ https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-
   .hero {
     background-image: url("./images/background-desktop.jpg");
 
-    .description {
-      font-size: 1.6rem;
+    .brand {
+      font-size: 8rem;
     }
 
-    .logo {
-      font-size: 8rem;
+    .description {
+      font-size: 1.6rem;
     }
   }
 }
