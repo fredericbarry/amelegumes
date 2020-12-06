@@ -18,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "https://gist.githubusercontent.com/fredericbarry/d65a89257da4ab93c9b81b19e68f3729/raw/532bc7770c2e550be7801d1ad0763f6064e31a40/products.json"
+      "https://gist.githubusercontent.com/fredericbarry/349338aeb5e48343020f0bf9236b1e51/raw/63f22af3d046c3bdac004b20dd13a95b21b6d47f/amelegumes-products.json"
     )
       .then((response) => response.json())
       .then((products) => this.setState({ products: products }));
