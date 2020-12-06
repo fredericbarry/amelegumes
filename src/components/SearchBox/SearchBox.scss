@@ -1,4 +1,4 @@
-.SearchBox {
+.search-box {
   border: 1px solid #e0e0e0; /* Alto */
   border-radius: 0;
 
@@ -11,13 +11,13 @@
 
   width: 300px;
   max-width: 50%;
-}
 
-.SearchBox::placeholder {
-  color: rgba(0, 0, 0, 0.35);
-}
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.35);
+  }
 
-.SearchBox:focus {
-  color: rgba(0, 0, 0, 0.87);
-  outline: none;
+  &:focus {
+    color: rgba(0, 0, 0, 0.87);
+    outline: none;
+  }
 }
