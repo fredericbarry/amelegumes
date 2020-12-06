@@ -1,4 +1,4 @@
-.HeroSection {
+.hero {
   /* Background */
   background-attachment: fixed;
   background-color: #c84e28; /* Sinopia */
@@ -21,58 +21,58 @@
 
   /* Text */
   text-align: center;
-}
 
-.HeroContent {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 1em;
-  padding: 1em;
-}
+  .content {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
+    padding: 1em;
+  }
 
-.HeroLogo {
-  font-size: 4rem;
-}
+  .logo {
+    font-size: 4rem;
+  }
 
-.HeroDescription {
-  cursor: default;
-  font-size: 0.8rem;
+  .description {
+    cursor: default;
+    font-size: 0.8rem;
+  }
 }
 
 /* iOS devices
 https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
 */
 @supports (-webkit-touch-callout: none) {
-  .HeroSection {
+  .hero {
     background-attachment: scroll;
   }
 }
 
 /* Tablet */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  .HeroSection {
+  .hero {
     background-image: url("./images/background-tablet.jpg");
-  }
 
-  .HeroLogo {
-    font-size: 6rem;
-  }
+    .logo {
+      font-size: 6rem;
+    }
 
-  .HeroDescription {
-    font-size: 1.2rem;
+    .description {
+      font-size: 1.2rem;
+    }
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1025px) {
-  .HeroSection {
+  .hero {
     background-image: url("./images/background-desktop.jpg");
-  }
 
-  .HeroLogo {
-    font-size: 8rem;
-  }
+    .description {
+      font-size: 1.6rem;
+    }
 
-  .HeroDescription {
-    font-size: 1.6rem;
+    .logo {
+      font-size: 8rem;
+    }
   }
 }
