@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "fontsource-roboto/400-normal.css";
 
-import "./index.css";
+import "./index.scss";
 
 import App from "./containers/App";
 

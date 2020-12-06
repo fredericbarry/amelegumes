@@ -26,8 +26,8 @@ body {
 
   /* Prevent adjustments of font size after orientation changes in iOS. */
   -webkit-text-size-adjust: 100%;
-}
 
-body::backdrop {
-  background-color: #fafafa; /* Cultured */
+  &::backdrop {
+    background-color: #fafafa; /* Cultured */
+  }
 }
