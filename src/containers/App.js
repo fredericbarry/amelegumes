@@ -18,7 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(
-      "https://gist.githubusercontent.com/fredericbarry/349338aeb5e48343020f0bf9236b1e51/raw/63f22af3d046c3bdac004b20dd13a95b21b6d47f/amelegumes-products.json"
+      "https://raw.githubusercontent.com/fredericbarry/amelegumes-api/master/db.json"
     )
       .then((response) => response.json())
       .then((products) => this.setState({ products: products }));
