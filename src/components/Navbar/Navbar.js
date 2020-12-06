@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Toolbar.scss";
+import "./Navbar.scss";
 
-const NavBar = (props) => {
+const Navbar = (props) => {
   return (
     <>
       <nav className="navbar">{props.children}</nav>
@@ -11,4 +11,4 @@ const NavBar = (props) => {
   );
 };
 
-export default NavBar;
+export default Navbar;
