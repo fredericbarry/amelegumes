@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import Logo from "../components/Logo/Logo";
-import NavBar from "../components/NavBar/NavBar";
+import NavBar from "../components/Toolbar/Toolbar";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
 
