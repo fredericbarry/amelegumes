@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./Product.css";
+import "./Product.scss";
 
 const Product = ({ name, image, price, description }) => {
   const priceUnit = price?.unit ? (
-    <span className="priceUnit">{price.unit}$ ch.</span>
+    <span className="unit">{price.unit}$ ch.</span>
   ) : (
     ""
   );
@@ -12,23 +12,23 @@ const Product = ({ name, image, price, description }) => {
   const priceHalfDozen = price?.halfDozen ? (
     <>
       <span> ou </span>
-      <span className="priceHalfDozen">6 pour {price.halfDozen}$</span>
+      <span className="half-dozen">6 pour {price.halfDozen}$</span>
     </>
   ) : (
     ""
   );
 
   return (
-    <div className="productContainer">
+    <div className="product">
       <img
-        className="productImage"
+        className="image"
         alt={name}
         src={process.env.PUBLIC_URL + "/assets/products/" + image}
       />
-      <h2 className="productName">{name}</h2>
-      <p className="productDescription">{description}</p>
-      <div className="cardMeta">
-        <div className="productPricing">
+      <h2 className="name">{name}</h2>
+      <p className="description">{description}</p>
+      <div className="meta">
+        <div className="pricing">
           Semis : {priceUnit}
           {priceHalfDozen}
         </div>
