@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <>
         <Navbar />
-        {!searchfield.length ? <Hero /> : <></>}
+        <Hero />
         {!products.length ? (
           <Loader />
         ) : (
