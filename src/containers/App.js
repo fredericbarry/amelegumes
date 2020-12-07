@@ -48,7 +48,10 @@ class App extends Component {
           <Loader />
         ) : (
           <>
-            <SearchBox searchChange={this.onSearchChange} />
+            <SearchBox
+              placeholder="Rechercher"
+              searchChange={this.onSearchChange}
+            />
             <Products products={filteredProducts} />
           </>
         )}
