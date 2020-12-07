@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
-import Brand from "../components/Brand/Brand";
 import Navbar from "../components/Navbar/Navbar";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
@@ -43,15 +42,15 @@ class App extends Component {
       });
     return (
       <>
-        <Navbar>
-          <Brand className="brand" />
-          <SearchBox searchChange={this.onSearchChange} />
-        </Navbar>
+        <Navbar />
         {!searchfield.length ? <Hero /> : <></>}
         {!products.length ? (
           <Loader />
         ) : (
-          <Products products={filteredProducts} />
+          <>
+            <SearchBox searchChange={this.onSearchChange} />
+            <Products products={filteredProducts} />
+          </>
         )}
       </>
     );
