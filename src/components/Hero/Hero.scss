@@ -29,7 +29,7 @@
   }
 
   .brand {
-    font-size: 4rem;
+    padding: 1em 0;
   }
 
   .description {
@@ -52,10 +52,6 @@ https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-
   .hero {
     background-image: url("./images/background-tablet.jpg");
 
-    .brand {
-      font-size: 6rem;
-    }
-
     .description {
       font-size: 1.2rem;
     }
@@ -66,10 +62,6 @@ https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-
 @media screen and (min-width: 1025px) {
   .hero {
     background-image: url("./images/background-desktop.jpg");
-
-    .brand {
-      font-size: 8rem;
-    }
 
     .description {
       font-size: 1.6rem;
