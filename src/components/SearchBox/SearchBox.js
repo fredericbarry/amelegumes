@@ -4,12 +4,9 @@ import "./SearchBox.scss";
 
 const SearchBox = ({ placeholder, searchChange }) => {
   return (
-    <input
-      type="search"
-      className="search-box"
-      placeholder={placeholder}
-      onChange={searchChange}
-    />
+    <div className="search-box">
+      <input type="search" placeholder={placeholder} onChange={searchChange} />
+    </div>
   );
 };
 
