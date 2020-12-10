@@ -8,7 +8,9 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="content">
-        <Brand className="brand" />
+        <div className="brand">
+          <Brand />
+        </div>
         <div className="description">
           Les légumes les plus Amélicieux qui soient
         </div>

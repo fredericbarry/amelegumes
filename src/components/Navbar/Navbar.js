@@ -1,14 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
+
+import Brand from "../Brand/Brand";
 
 import "./Navbar.scss";
 
-const Navbar = (props) => {
-  return (
-    <>
-      <nav className="navbar">{props.children}</nav>
-      <div className="navbar-padding"></div>
-    </>
-  );
-};
+class Navbar extends Component {
+  render() {
+    return (
+      <>
+        <nav className="navbar">
+          <Brand />
+        </nav>
+        <div className="navbar-padding"></div>
+      </>
+    );
+  }
+}
 
 export default Navbar;
