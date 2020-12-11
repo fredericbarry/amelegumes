@@ -4,14 +4,14 @@ import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import Navbar from "../components/Navbar/Navbar";
 import Products from "../components/Products/Products";
-import SearchBox from "../components/SearchBox/SearchBox";
+import SearchInput from "../components/SearchInput/SearchInput";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       products: [],
-      searchfield: "",
+      searchInput: "",
     };
   }
 
@@ -23,12 +23,12 @@ class App extends Component {
       .then((products) => this.setState({ products: products }));
   }
 
-  onSearchChange = (event) => {
-    this.setState({ searchfield: event.target.value });
+  handleSearchInputChange = (event) => {
+    this.setState({ searchInput: event.target.value });
   };
 
   render() {
-    const { products, searchfield } = this.state;
+    const { products, searchInput } = this.state;
     const filteredProducts = products
       .sort((a, b) => {
         // If category is the same then sort by name
@@ -38,7 +38,11 @@ class App extends Component {
         return a.category > b.category ? 1 : -1;
       })
       .filter((product) => {
-        return product.name.toLowerCase().includes(searchfield.toLowerCase());
+        return (
+          product.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+          product.category.toLowerCase().includes(searchInput.toLowerCase()) ||
+          product.description.toLowerCase().includes(searchInput.toLowerCase())
+        );
       });
     return (
       <>
@@ -48,9 +52,9 @@ class App extends Component {
           <Loader />
         ) : (
           <>
-            <SearchBox
+            <SearchInput
               placeholder="Rechercher"
-              searchChange={this.onSearchChange}
+              onChange={this.handleSearchInputChange}
             />
             <Products products={filteredProducts} />
           </>
