@@ -1,0 +1,41 @@
+.search-box {
+  background-color: white;
+  border: 1px solid #009688; /* Persian Green */
+  border-radius: 4px;
+  color: #009688; /* Persian Green */
+  padding: 0.5em;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  width: 90%;
+  max-width: 500px;
+
+  input[type="search"] {
+    border-width: 0;
+    font-size: 1.25rem;
+    margin: 0 4px;
+    padding: 4px;
+
+    flex-grow: 1;
+
+    border-radius: 0;
+    /* Fix input element rounding on iOS */
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+
+    &:focus {
+      color: rgba(0, 0, 0, 0.87);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.35);
+    }
+
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+}

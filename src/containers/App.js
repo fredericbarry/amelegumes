@@ -3,8 +3,9 @@ import React, { Component } from "react";
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import Navbar from "../components/Navbar/Navbar";
+import ProductFilters from "../components/ProductFilters/ProductFilters";
 import Products from "../components/Products/Products";
-import SearchInput from "../components/SearchInput/SearchInput";
+import SearchBox from "../components/SearchBox/SearchBox";
 
 class App extends Component {
   constructor() {
@@ -23,7 +24,7 @@ class App extends Component {
       .then((products) => this.setState({ products: products }));
   }
 
-  handleSearchInputChange = (event) => {
+  handleSearchBoxChange = (event) => {
     this.setState({ searchInput: event.target.value });
   };
 
@@ -52,10 +53,12 @@ class App extends Component {
           <Loader />
         ) : (
           <>
-            <SearchInput
-              placeholder="Rechercher"
-              onChange={this.handleSearchInputChange}
-            />
+            <ProductFilters>
+              <SearchBox
+                placeholder="Rechercher"
+                onChange={this.handleSearchBoxChange}
+              />
+            </ProductFilters>
             <Products products={filteredProducts} />
           </>
         )}
