@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./SearchInput.scss";
+import "./SearchBox.scss";
 
 const SearchBox = ({ placeholder, onChange }) => {
   return (
-    <div className="search-input">
+    <div className="search-box">
       <input type="search" placeholder={placeholder} onChange={onChange} />
     </div>
   );

@@ -4,7 +4,7 @@ import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import Navbar from "../components/Navbar/Navbar";
 import Products from "../components/Products/Products";
-import SearchInput from "../components/SearchInput/SearchInput";
+import SearchBox from "../components/SearchBox/SearchBox";
 
 class App extends Component {
   constructor() {
@@ -23,7 +23,7 @@ class App extends Component {
       .then((products) => this.setState({ products: products }));
   }
 
-  handleSearchInputChange = (event) => {
+  handleSearchBoxChange = (event) => {
     this.setState({ searchInput: event.target.value });
   };
 
@@ -52,9 +52,9 @@ class App extends Component {
           <Loader />
         ) : (
           <>
-            <SearchInput
+            <SearchBox
               placeholder="Rechercher"
-              onChange={this.handleSearchInputChange}
+              onChange={this.handleSearchBoxChange}
             />
             <Products products={filteredProducts} />
           </>
