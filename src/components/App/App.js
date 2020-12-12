@@ -1,8 +1,8 @@
 import React from "react";
 
-import Hero from "../components/Hero/Hero";
-import Navbar from "../components/Navbar/Navbar";
-import Products from "../components/Products/Products";
+import Hero from "../Hero/Hero";
+import Navbar from "../Navbar/Navbar";
+import Products from "../Products/Products";
 
 const App = () => {
   return (

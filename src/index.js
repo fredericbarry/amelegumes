@@ -5,7 +5,7 @@ import "fontsource-roboto/400-normal.css";
 
 import "./index.scss";
 
-import App from "./containers/App";
+import App from "./components/App/App";
 
 ReactDOM.render(
   <React.StrictMode>
