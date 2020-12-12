@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
 import Navbar from "../components/Navbar/Navbar";
+import ProductFilters from "../components/ProductFilters/ProductFilters";
 import Products from "../components/Products/Products";
 import SearchBox from "../components/SearchBox/SearchBox";
 
@@ -52,10 +53,12 @@ class App extends Component {
           <Loader />
         ) : (
           <>
-            <SearchBox
-              placeholder="Rechercher"
-              onChange={this.handleSearchBoxChange}
-            />
+            <ProductFilters>
+              <SearchBox
+                placeholder="Rechercher"
+                onChange={this.handleSearchBoxChange}
+              />
+            </ProductFilters>
             <Products products={filteredProducts} />
           </>
         )}
