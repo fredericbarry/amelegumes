@@ -1,9 +1,37 @@
+$grid-padding: 0.5rem;
+
 .products {
-  padding: 0.5rem;
+  .no-results-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50vh;
+    padding: 2em;
+
+    .emoji {
+      font-size: 10rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-top: 1em;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    q {
+      font-style: italic;
+    }
+  }
 
   .grid {
     display: grid;
-    gap: 0.5rem;
+    gap: $grid-padding;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    padding: $grid-padding;
   }
 }
