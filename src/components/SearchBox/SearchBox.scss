@@ -1,7 +1,10 @@
 .search-box {
   background-color: #e0e0e0; /* Alto */
+
+  align-items: center;
   display: flex;
   justify-content: center;
+
   padding: 1em;
 
   input[type="search"] {
