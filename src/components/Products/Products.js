@@ -67,7 +67,7 @@ class Products extends React.Component {
                 <p>
                   On va se le dire, mon moteur de recherche est du genre un peu
                   simplet, donc soyez pas trop compliqué dans votre choix de mot
-                  pour pas trop le mêler, vous savez! 😉
+                  pour ne pas trop le mêler! 😉
                 </p>
               </div>
             ) : (
