@@ -7,7 +7,7 @@ import "./SearchBox.scss";
 const SearchBox = ({ placeholder, onChange }) => {
   return (
     <div className="search-box">
-      <IconSearch />
+      <IconSearch width="1.25rem" height="1.25rem" />
       <input type="search" placeholder={placeholder} onChange={onChange} />
     </div>
   );
