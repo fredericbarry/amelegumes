@@ -1,6 +1,8 @@
 {
   "short_name": "Amélégumes",
-  "name": "Les légumes les plus Amélicieux qui soient",
+  "name": "Amélégumes ~ Les légumes les plus Amélicieux qui soient",
+  "description": "Découvrez l'étonnante variété de tomates, concombres, courges et herbes cultivés avec amour dans nos jardins potagers.",
+  "lang": "fr-CA",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +20,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "./?utm_source=a2hs",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#009688",
+  "background_color": "#009688"
 }
