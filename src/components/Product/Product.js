@@ -24,6 +24,7 @@ const Product = ({ name, image, price, description }) => {
         className="image"
         alt={name}
         src={process.env.PUBLIC_URL + "/assets/products/" + image}
+        loading="lazy"
       />
       <h2 className="name">{name}</h2>
       <p className="description">{description}</p>
