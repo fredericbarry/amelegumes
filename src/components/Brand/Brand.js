@@ -1,6 +1,6 @@
 import React from "react";
 
-const IconBars = () => {
+const Brand = () => {
   return (
     <svg fill="currentColor" role="img" viewBox="0 0 132.29 29.2">
       <title>Amélégumes</title>
@@ -20,4 +20,4 @@ const IconBars = () => {
   );
 };
 
-export default IconBars;
+export default Brand;
