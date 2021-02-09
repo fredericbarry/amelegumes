@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .loader {
   display: flex;
   justify-content: center;
@@ -5,9 +7,9 @@
   .icon {
     animation: spin 1s linear infinite;
 
-    border: 16px solid #e0e0e0; /* Alto */
+    border: 16px solid $grey-dark;
     border-radius: 50%;
-    border-top: 16px solid #009688; /* Persian Green */
+    border-top: 16px solid $color-primary;
 
     margin: 2em;
 

@@ -1,25 +1,21 @@
+@import "../../variables.scss";
+
 .hero {
-  /* Background */
   background-attachment: fixed;
-  background-color: #c84e28; /* Sinopia */
+  background-color: $color-secondary;
   background-image: url("./images/background-mobile.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  /* Flexbox */
   align-items: center;
   display: flex;
   justify-content: center;
 
-  /* Padding */
-  padding: 1rem;
-
-  /* Sizing */
   min-height: calc(100vh - 64px);
   overflow: hidden;
 
-  /* Text */
+  padding: 1rem;
   text-align: center;
 
   .content {

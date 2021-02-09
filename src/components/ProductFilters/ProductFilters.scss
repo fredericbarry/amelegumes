@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 .product-filters {
-  background-color: #e0e0e0; /* Alto */
+  background-color: $grey-dark;
 
   display: flex;
   align-items: center;

@@ -1,6 +1,8 @@
+@import "../../variables.scss";
+
 .product {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: white;
+  color: $rgba87;
+  background-color: $white;
   border-radius: 0.25rem;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -18,7 +20,7 @@
   }
 
   .name {
-    color: #009688; /* Persian Green */
+    color: $color-primary;
     cursor: default;
     font-size: 1.25rem;
     font-weight: 400;
@@ -40,9 +42,9 @@
     display: inline-flex;
 
     .pricing {
-      border: 1px solid #e0e0e0; /* Alto */
+      border: 1px solid $grey-dark;
       border-radius: 0.25rem;
-      color: rgba(0, 0, 0, 0.87);
+      color: $rgba87;
       cursor: default;
       font-size: 0.8125rem;
       padding: 0.25rem 0.5rem;

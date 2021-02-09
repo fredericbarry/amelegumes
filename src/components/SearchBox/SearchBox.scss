@@ -1,8 +1,10 @@
+@import "../../variables.scss";
+
 .search-box {
-  background-color: white;
-  border: 1px solid #009688; /* Persian Green */
+  background-color: $white;
+  border: 1px solid $color-primary;
   border-radius: 0.25rem;
-  color: #009688; /* Persian Green */
+  color: $color-primary;
   padding: 0.5rem;
 
   align-items: center;
@@ -27,12 +29,11 @@
     -webkit-border-radius: 0.25rem;
 
     &:focus {
-      color: rgba(0, 0, 0, 0.87);
       outline: none;
     }
 
     &::placeholder {
-      color: rgba(0, 0, 0, 0.35);
+      color: rgba(0, 0, 0, 0.15);
     }
 
     &::-webkit-search-cancel-button {
