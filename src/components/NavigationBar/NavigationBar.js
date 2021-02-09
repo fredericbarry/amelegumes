@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Brand from "../Brand/Brand";
 
-import "./Navbar.scss";
+import "./NavigationBar.scss";
 
 class Navbar extends Component {
   render() {
