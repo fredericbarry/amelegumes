@@ -13,7 +13,6 @@ import SearchBox from "../SearchBox/SearchBox";
 
 const wooClientKey = "ck_ec50580d8815bd2b14430d875fab0830a26b4aa4";
 const wooClientSecret = "cs_f081ccd5aa3230d9a1c8eb1ce564338e491e10fc";
-const wooUrl = "https://backend.amelegumes.com/wp-json/wc/v3/products";
 
 function basicAuth(key, secret) {
   let hash = btoa(key + ":" + secret);
@@ -24,9 +23,12 @@ let auth = basicAuth(wooClientKey, wooClientSecret);
 
 async function getProducts() {
   try {
-    const response = await fetch(wooUrl + "products", {
-      headers: { Authorization: basicAuth(wooClientKey, wooClientSecret) },
-    });
+    const response = await fetch(
+      "https://backend.amelegumes.com/wp-json/wc/v3/products",
+      {
+        headers: { Authorization: basicAuth(wooClientKey, wooClientSecret) },
+      }
+    );
     return await response.json();
   } catch (error) {
     // catches errors both in fetch and response.json
@@ -45,7 +47,7 @@ class Products extends React.Component {
     };
   }
 
-  fetchProducts() {
+  fetchGitHubProducts() {
     fetch(
       "https://raw.githubusercontent.com/fredericbarry/amelegumes-api/master/db.json"
     )
@@ -53,8 +55,14 @@ class Products extends React.Component {
       .then((products) => this.setState({ products: products }));
   }
 
+  fetchWooCommerceProducts() {
+    fetch("https://backend.amelegumes.com/wp-json/wc/v3/products")
+      .then((response) => response.json())
+      .then((products) => this.setState({ products: products }));
+  }
+
   componentDidMount() {
-    this.fetchProducts();
+    this.fetchGitHubProducts();
   }
 
   handleSearchBoxChange = (event) => {
