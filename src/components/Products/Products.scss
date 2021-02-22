@@ -1,5 +1,3 @@
-$grid-padding: 0.5rem;
-
 .products {
   .no-results-found {
     display: flex;
@@ -25,13 +23,5 @@ $grid-padding: 0.5rem;
     q {
       font-style: italic;
     }
-  }
-
-  .grid {
-    display: grid;
-    gap: $grid-padding;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
-    padding: $grid-padding;
   }
 }
