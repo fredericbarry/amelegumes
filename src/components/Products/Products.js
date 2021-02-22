@@ -8,7 +8,8 @@ import ProductList from "../ProductList/ProductList";
 import SearchBox from "../SearchBox/SearchBox";
 
 const Products = () => {
-  const [isFetching, setIsFetching] = useState(true);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState(null);
 
   const basicAuth = (key, secret) => {
@@ -29,16 +30,29 @@ const Products = () => {
         },
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw Error(
+            "Désolée, je n'arrive pas à retrouver les produits demandés"
+          );
+        }
+        return res.json();
+      })
       .then((products) => {
         setProducts(products);
-        setIsFetching(false);
+        setIsLoading(false);
+        setError(null);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <>
-      {isFetching && <Loader />}
+      {error && <div>{error}</div>}
+      {isLoading && <Loader />}
       {products && <ProductList products={products} />}
     </>
   );
