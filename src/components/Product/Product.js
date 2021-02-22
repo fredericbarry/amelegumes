@@ -1,38 +1,19 @@
-import React from "react";
-
 import "./Product.scss";
 
-const Product = ({ name, image, price, description }) => {
-  const priceUnit = price?.unit ? (
-    <span className="unit">{price.unit}$ ch.</span>
-  ) : (
-    ""
-  );
-
-  const priceHalfDozen = price?.halfDozen ? (
-    <>
-      <span> ou </span>
-      <span className="half-dozen">6 pour {price.halfDozen}$</span>
-    </>
-  ) : (
-    ""
-  );
-
+const Product = ({ product }) => {
+  const { name, description, images, price } = product;
   return (
     <div className="product">
-      <img
-        className="image"
-        alt={name}
-        src={process.env.PUBLIC_URL + "/assets/products/" + image}
-        loading="lazy"
-      />
+      <img className="image" alt={name} src={images[0].src} loading="lazy" />
       <h2 className="name">{name}</h2>
-      <p className="description">{description}</p>
+      <div
+        className="description"
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      ></div>
       <div className="meta">
-        <div className="pricing">
-          Semis : {priceUnit}
-          {priceHalfDozen}
-        </div>
+        <div className="pricing">Semis : {price}$ ch.</div>
       </div>
     </div>
   );
