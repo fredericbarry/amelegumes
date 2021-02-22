@@ -1,19 +1,17 @@
-import React from "react";
+import "./ProductList.scss";
 
 import Product from "../Product/Product";
 
 const ProductList = ({ products }) => {
-  return products.map((product) => {
-    return (
-      <Product
-        key={product.id}
-        name={product.name}
-        image={product.image}
-        price={product.price}
-        description={product.description}
-      />
-    );
-  });
+  return (
+    <section className="product-list">
+      <div className="grid">
+        {products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default ProductList;
