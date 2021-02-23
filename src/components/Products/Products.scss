@@ -1,27 +1,25 @@
-.products {
-  .no-results-found {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.no-results-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    min-height: 50vh;
-    padding: 2rem;
+  min-height: 50vh;
+  padding: 2rem;
 
-    .emoji {
-      font-size: 10rem;
-    }
+  .emoji {
+    font-size: 10rem;
+  }
 
-    p {
-      font-size: 1.25rem;
-      margin-top: 1rem;
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-    }
+  p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
 
-    q {
-      font-style: italic;
-    }
+  q {
+    font-style: italic;
   }
 }
