@@ -12,8 +12,11 @@ const App = () => {
       <NavigationBar />
       <main>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Hero />
+            <Products />
+          </Route>
+          <Route path="/produits">
             <Products />
           </Route>
         </Switch>
