@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import React from "react";
 
 import Hero from "../Hero/Hero";
@@ -6,11 +8,17 @@ import Products from "../Products/Products";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <NavigationBar />
-      <Hero />
-      <Products />
-    </>
+      <main>
+        <Switch>
+          <Route path="/">
+            <Hero />
+            <Products />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 };
 
