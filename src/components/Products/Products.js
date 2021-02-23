@@ -1,59 +1,23 @@
-import { Component, useEffect, useState } from "react";
+import { Component } from "react";
 
 import "./Products.scss";
 
+import useFetch from "../useFetch";
 import Loader from "../Loader/Loader";
 import ProductFilters from "../ProductFilters/ProductFilters";
 import ProductList from "../ProductList/ProductList";
 import SearchBox from "../SearchBox/SearchBox";
 
 const Products = () => {
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [products, setProducts] = useState(null);
-
-  const basicAuth = (key, secret) => {
-    let hash = btoa(key + ":" + secret);
-    return "Basic " + hash;
-  };
-
-  useEffect(() => {
-    fetch(
-      process.env.REACT_APP_API_DOMAIN_URL +
-        "wp-json/wc/v3/products?per_page=100&status=publish",
-      {
-        headers: {
-          Authorization: basicAuth(
-            process.env.REACT_APP_API_CLIENT_KEY,
-            process.env.REACT_APP_API_CLIENT_SECRET
-          ),
-        },
-      }
-    )
-      .then((res) => {
-        if (!res.ok) {
-          throw Error(
-            "Désolée, je n'arrive pas à retrouver les produits demandés"
-          );
-        }
-        return res.json();
-      })
-      .then((products) => {
-        setProducts(products);
-        setIsLoading(false);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setIsLoading(false);
-      });
-  }, []);
+  const { isFetching, error, response: latestProducts } = useFetch(
+    "wp-json/wc/v3/products?per_page=100&status=publish"
+  );
 
   return (
     <>
       {error && <div>{error}</div>}
-      {isLoading && <Loader />}
-      {products && <ProductList products={products} />}
+      {isFetching && <Loader />}
+      {latestProducts && <ProductList products={latestProducts} />}
     </>
   );
 };
@@ -81,31 +45,29 @@ class oldProducts extends Component {
     });
 
     return (
-      <div className="products">
-        <>
-          <ProductFilters>
-            <SearchBox
-              placeholder="Rechercher"
-              onChange={this.handleSearchBoxChange}
-            />
-          </ProductFilters>
-          {!filteredProducts.length ? (
-            <div className="no-results-found">
-              <div className="emoji">🤷‍♀️</div>
-              <p>
-                Désolée, je ne trouve pas de <q>{searchInput}</q>&nbsp;…
-              </p>
-              <p>
-                On va se le dire, mon moteur de recherche est du genre un peu
-                simplet, donc soyez pas trop compliqué dans votre choix de mot
-                pour ne pas trop le mêler! 😉
-              </p>
-            </div>
-          ) : (
-            <ProductList products={products} />
-          )}
-        </>
-      </div>
+      <>
+        <ProductFilters>
+          <SearchBox
+            placeholder="Rechercher"
+            onChange={this.handleSearchBoxChange}
+          />
+        </ProductFilters>
+        {!filteredProducts.length ? (
+          <div className="no-results-found">
+            <div className="emoji">🤷‍♀️</div>
+            <p>
+              Désolée, je ne trouve pas de <q>{searchInput}</q>&nbsp;…
+            </p>
+            <p>
+              On va se le dire, mon moteur de recherche est du genre un peu
+              simplet, donc soyez pas trop compliqué dans votre choix de mot
+              pour ne pas trop le mêler! 😉
+            </p>
+          </div>
+        ) : (
+          <ProductList products={products} />
+        )}
+      </>
     );
   }
 }
