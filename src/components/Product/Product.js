@@ -1,20 +1,39 @@
+import { useParams } from "react-router-dom";
+import useFetch from "../useFetch";
+
+import Loader from "../Loader/Loader";
+
 import "./Product.scss";
 
-const Product = ({ product }) => {
-  const { name, description, images, price } = product;
+const Product = () => {
+  const { slug } = useParams();
+  const { isFetching, error, response: product } = useFetch(
+    "wp-json/wc/v3/products?status=publish&slug=" + slug
+  );
   return (
     <div className="product">
-      <img className="image" alt={name} src={images[0].src} loading="lazy" />
-      <h2 className="name">{name}</h2>
-      <div
-        className="description"
-        dangerouslySetInnerHTML={{
-          __html: description,
-        }}
-      ></div>
-      <div className="meta">
-        <div className="pricing">Semis : {price}$ ch.</div>
-      </div>
+      {error && <div>{error}</div>}
+      {isFetching && <Loader />}
+      {product && (
+        <article>
+          <h2 className="name">{product[0].name}</h2>
+          <img
+            className="image"
+            alt={product[0].name}
+            src={product[0].images[0].src}
+            loading="lazy"
+          />
+          <div
+            className="description"
+            dangerouslySetInnerHTML={{
+              __html: product[0].description,
+            }}
+          ></div>
+          <div className="meta">
+            <div className="pricing">Semis : {product[0].price}$ ch.</div>
+          </div>
+        </article>
+      )}
     </div>
   );
 };
