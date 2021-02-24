@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 import Brand from "../Brand/Brand";
 
@@ -10,16 +10,16 @@ const Navbar = () => {
       <nav className="navigation-bar">
         <div className="container">
           <h1>
-            <a href="/">
+            <Link to="/">
               <Brand />
-            </a>
+            </Link>
           </h1>
           <ul>
             <li>
-              <a href="/">Accueil</a>
+              <Link to="/">Accueil</Link>
             </li>
             <li>
-              <a href="/produits">Produits</a>
+              <Link to="/produits">Produits</Link>
             </li>
           </ul>
         </div>
