@@ -4,6 +4,7 @@ import React from "react";
 
 import Hero from "../Hero/Hero";
 import NavigationBar from "../NavigationBar/NavigationBar";
+import Product from "../Product/Product";
 import Products from "../Products/Products";
 
 const App = () => {
@@ -17,6 +18,9 @@ const App = () => {
           </Route>
           <Route path="/produits">
             <Products />
+          </Route>
+          <Route path="/produit/:slug">
+            <Product />
           </Route>
         </Switch>
       </main>
