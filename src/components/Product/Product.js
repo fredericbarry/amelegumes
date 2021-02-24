@@ -1,39 +1,39 @@
-import React from "react";
+import { useParams } from "react-router-dom";
+import useFetch from "../useFetch";
+
+import Loader from "../Loader/Loader";
 
 import "./Product.scss";
 
-const Product = ({ name, image, price, description }) => {
-  const priceUnit = price?.unit ? (
-    <span className="unit">{price.unit}$ ch.</span>
-  ) : (
-    ""
+const Product = () => {
+  const { slug } = useParams();
+  const { isFetching, error, response: product } = useFetch(
+    "wp-json/wc/v3/products?status=publish&slug=" + slug
   );
-
-  const priceHalfDozen = price?.halfDozen ? (
-    <>
-      <span> ou </span>
-      <span className="half-dozen">6 pour {price.halfDozen}$</span>
-    </>
-  ) : (
-    ""
-  );
-
   return (
     <div className="product">
-      <img
-        className="image"
-        alt={name}
-        src={process.env.PUBLIC_URL + "/assets/products/" + image}
-        loading="lazy"
-      />
-      <h2 className="name">{name}</h2>
-      <p className="description">{description}</p>
-      <div className="meta">
-        <div className="pricing">
-          Semis : {priceUnit}
-          {priceHalfDozen}
-        </div>
-      </div>
+      {error && <div>{error}</div>}
+      {isFetching && <Loader />}
+      {product && (
+        <article>
+          <h2 className="name">{product[0].name}</h2>
+          <img
+            className="image"
+            alt={product[0].name}
+            src={product[0].images[0].src}
+            loading="lazy"
+          />
+          <div
+            className="description"
+            dangerouslySetInnerHTML={{
+              __html: product[0].description,
+            }}
+          ></div>
+          <div className="meta">
+            <div className="pricing">Semis : {product[0].price}$ ch.</div>
+          </div>
+        </article>
+      )}
     </div>
   );
 };
