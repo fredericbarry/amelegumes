@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./ProductList.scss";
 
 const ProductList = ({ products }) => {
@@ -5,25 +7,21 @@ const ProductList = ({ products }) => {
     <section className="product-list">
       <div className="grid">
         {products.map((product) => {
-          const { id, name, description, images, price } = product;
+          const { id, name, slug, images, price } = product;
           return (
             <div key={id} className="product">
-              <img
-                className="image"
-                alt={name}
-                src={images[0].src}
-                loading="lazy"
-              />
-              <h2 className="name">{name}</h2>
-              <div
-                className="description"
-                dangerouslySetInnerHTML={{
-                  __html: description,
-                }}
-              ></div>
-              <div className="meta">
-                <div className="pricing">Semis : {price}$ ch.</div>
-              </div>
+              <Link to={`produit/semis/${slug}`}>
+                <img
+                  className="image"
+                  alt={name}
+                  src={images[0].src}
+                  loading="lazy"
+                />
+                <h2 className="name">{name}</h2>
+                <div className="meta">
+                  <div className="pricing">Semis : {price}$ ch.</div>
+                </div>
+              </Link>
             </div>
           );
         })}
