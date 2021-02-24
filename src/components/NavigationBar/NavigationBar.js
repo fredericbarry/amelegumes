@@ -19,7 +19,7 @@ const Navbar = () => {
               <Link to="/">Accueil</Link>
             </li>
             <li>
-              <Link to="/produits">Produits</Link>
+              <Link to="/produits">Nos semis</Link>
             </li>
           </ul>
         </div>
