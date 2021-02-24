@@ -11,7 +11,10 @@ const useFetch = (url) => {
   };
 
   useEffect(() => {
+    const abortController = new AbortController();
+
     fetch(process.env.REACT_APP_API_DOMAIN_URL + url, {
+      signal: abortController.signal,
       headers: {
         Authorization: basicAuth(
           process.env.REACT_APP_API_CLIENT_KEY,
@@ -20,7 +23,6 @@ const useFetch = (url) => {
       },
     })
       .then((res) => {
-        console.error(res);
         if (!res.ok) {
           throw Error(
             "Désolée, je n'arrive pas à récupérer les informations demandés"
@@ -34,9 +36,15 @@ const useFetch = (url) => {
         setError(null);
       })
       .catch((err) => {
-        setError(err.message);
-        setIsFetching(false);
+        if (err.name !== "AbortError") {
+          setError(err.message);
+          setIsFetching(false);
+        }
       });
+
+    return () => {
+      abortController.abort();
+    };
   }, [url]);
 
   return {
