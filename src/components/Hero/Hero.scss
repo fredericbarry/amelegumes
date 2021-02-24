@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
 
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 3rem);
   overflow: hidden;
 
   padding: 1rem;
@@ -35,8 +35,8 @@
 }
 
 /* iOS devices
-https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
-*/
+  https://stackoverflow.com/questions/30102792/css-media-query-to-target-only-ios-devices
+  */
 @supports (-webkit-touch-callout: none) {
   .hero {
     background-attachment: scroll;
