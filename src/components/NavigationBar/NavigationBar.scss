@@ -18,8 +18,12 @@ nav.navigation-bar {
     padding: 0.5rem;
   }
 
-  h1 a {
+  a {
     color: $white;
+  }
+
+  h1 {
+    line-height: normal;
   }
 
   svg {
@@ -37,7 +41,6 @@ nav.navigation-bar {
   li a {
     border: 0.063rem solid transparent;
     border-radius: 0.25rem;
-    color: $white;
     margin: 0.25rem 0.5rem;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
