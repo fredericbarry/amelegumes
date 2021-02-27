@@ -9,11 +9,11 @@ const Navbar = () => {
     <>
       <nav className="navigation-bar">
         <div className="container">
-          <h1>
-            <Link to="/">
+          <Link to="/">
+            <h1>
               <Brand />
-            </Link>
-          </h1>
+            </h1>
+          </Link>
           <ul>
             <li>
               <Link to="/">Accueil</Link>
