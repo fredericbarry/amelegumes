@@ -1,16 +1,15 @@
 @import "../../variables.scss";
 
-section.product-list {
-  padding: 0.5rem;
+.product-list {
+  padding: 0.225rem;
 
   .grid {
     display: grid;
-    gap: 0.5rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
-  a.card,
-  a.card:focus {
+  a.card {
     text-decoration: none;
   }
 
@@ -56,6 +55,28 @@ section.product-list {
           color: $rgba87;
         }
       }
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .product-list {
+    padding: 1rem;
+
+    .grid {
+      gap: 1rem;
+    }
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .product-list {
+    padding: 2rem;
+
+    .grid {
+      gap: 2rem;
     }
   }
 }
