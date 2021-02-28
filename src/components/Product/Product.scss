@@ -1,35 +1,43 @@
 @import "../../variables.scss";
 
 .product {
-  padding: 0.5rem;
+  padding: 0.225rem;
 
-  .name {
-    color: $color-primary;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.6;
-    margin: 0;
-    padding: 16px 0 8px 0;
+  .product__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.25rem;
+    display: block;
+    width: 100%;
   }
 
-  .image {
-  }
+  .product__content {
+    .product__name {
+      color: $color-primary;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.6;
+      margin: 0;
+      padding: 16px 0 8px 0;
+    }
 
-  .description {
-  }
+    .product__description {
+    }
 
-  .meta {
-    bottom: 0;
-    padding: 16px 0;
-    display: inline-flex;
+    .meta {
+      bottom: 0;
+      padding: 16px 0;
+      display: inline-flex;
 
-    .pricing {
-      border: 1px solid $grey-dark;
-      border-radius: 0.25rem;
-      color: $rgba87;
-      font-size: 0.8125rem;
-      padding: 0.25rem 0.5rem;
-      vertical-align: middle;
+      .pricing {
+        border: 1px solid $grey-dark;
+        border-radius: 0.25rem;
+        color: $rgba87;
+        font-size: 0.8125rem;
+        padding: 0.25rem 0.5rem;
+        vertical-align: middle;
+      }
     }
   }
 }

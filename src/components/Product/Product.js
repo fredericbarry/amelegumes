@@ -16,21 +16,23 @@ const Product = () => {
       {isFetching && <Loader />}
       {product && (
         <article>
-          <h2 className="name">{product[0].name}</h2>
           <img
-            className="image"
+            className="product__image"
             alt={product[0].name}
             src={product[0].images[0].src}
             loading="lazy"
           />
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{
-              __html: product[0].description,
-            }}
-          ></div>
-          <div className="meta">
-            <div className="pricing">Semis : {product[0].price}$ ch.</div>
+          <div className="product__content">
+            <h2 className="product__name">{product[0].name}</h2>
+            <div
+              className="product__description"
+              dangerouslySetInnerHTML={{
+                __html: product[0].description,
+              }}
+            ></div>
+            <div className="meta">
+              <div className="pricing">Semis : {product[0].price}$ ch.</div>
+            </div>
           </div>
         </article>
       )}
