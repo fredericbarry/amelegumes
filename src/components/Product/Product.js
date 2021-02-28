@@ -23,7 +23,9 @@ const Product = () => {
             loading="lazy"
           />
           <div className="product__content">
-            <h6 className="card__subtitle">{product[0].categories[0].name}</h6>
+            <h6 className="product__category">
+              {product[0].categories[0].name}
+            </h6>
             <h2 className="product__name">{product[0].name}</h2>
             <div
               className="product__description"
