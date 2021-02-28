@@ -10,7 +10,11 @@ const ProductList = ({ products }) => {
           console.log(product);
           const { id, name, slug, categories, images, price } = product;
           return (
-            <Link to={`produit/semis/${slug}`} key={id} className="card">
+            <Link
+              to={`boutique/${categories[0].slug}/${slug}`}
+              key={id}
+              className="card"
+            >
               <img
                 className="card__media"
                 alt={name}
