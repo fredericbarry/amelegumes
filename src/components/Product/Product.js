@@ -10,31 +10,47 @@ const Product = () => {
   const { isFetching, error, response: product } = useFetch(
     "wp-json/wc/v3/products?status=publish&slug=" + slug
   );
+  if (product) {
+    console.log(product);
+  }
   return (
-    <div className="product">
+    <>
       {error && <div>{error}</div>}
       {isFetching && <Loader />}
       {product && (
-        <article>
-          <h2 className="name">{product[0].name}</h2>
-          <img
-            className="image"
-            alt={product[0].name}
-            src={product[0].images[0].src}
-            loading="lazy"
-          />
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{
-              __html: product[0].description,
-            }}
-          ></div>
-          <div className="meta">
-            <div className="pricing">Semis : {product[0].price}$ ch.</div>
-          </div>
-        </article>
+        <div className="product__wrapper">
+          <article className="product">
+            <img
+              className="product__image"
+              alt={product[0].name}
+              src={product[0].images[0].src}
+              loading="lazy"
+            />
+            <div className="product__content">
+              <h6 className="product__category">
+                {product[0].categories[0].name}
+              </h6>
+              <div className="product__name__wrap">
+                <h2 className="product__name">{product[0].name}</h2>
+                <div className="product__price">
+                  {new Intl.NumberFormat("fr-CA", {
+                    style: "currency",
+                    currency: "CAD",
+                    currencyDisplay: "narrowSymbol",
+                  }).format(product[0].price)}
+                </div>
+              </div>
+              <div
+                className="product__description"
+                dangerouslySetInnerHTML={{
+                  __html: product[0].description,
+                }}
+              ></div>
+            </div>
+          </article>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
