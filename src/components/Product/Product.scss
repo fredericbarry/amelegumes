@@ -1,17 +1,20 @@
 @import "../../variables.scss";
 
 .product {
+  display: flex;
+  flex-direction: column;
+
   .product__image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     display: block;
     width: 100%;
   }
 
   .product__content {
-    padding: 0.225rem;
+    padding: 0.5rem;
 
     .product__category {
       color: #999999;
@@ -19,17 +22,49 @@
       font-weight: normal;
     }
 
-    .product__name {
-      color: $color-primary;
-      padding: 0 0 0.5rem 0;
+    .product__name__wrap {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      .product__name {
+        color: $color-primary;
+      }
+
+      .product__price {
+        color: $rgba87;
+        font-size: 1.5rem;
+      }
     }
 
     .product__description {
+      padding: 1rem 0;
+    }
+  }
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width: 481px) {
+  .product__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+    max-width: 1024px;
+
+    .product__image {
+      border-radius: 0.25rem;
+      padding-bottom: 0;
+      width: 50%;
     }
 
-    .product__price {
-      color: $rgba87;
-      padding: 1rem 0;
+    .product__content {
+      flex: 1;
+      padding: 0 1rem;
     }
   }
 }
