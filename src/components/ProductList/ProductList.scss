@@ -34,23 +34,8 @@ section.product-list {
     }
 
     .card__content {
-      margin: 1rem;
+      margin: 0.5rem;
       flex-grow: 1;
-
-      .card__title {
-        color: $color-primary;
-        font-size: 1.25rem;
-        font-weight: 400;
-        line-height: 1.6;
-      }
-    }
-
-    .card__meta {
-      margin: 1rem;
-      margin-top: 0;
-
-      display: flex;
-      justify-content: space-between;
 
       .card__subtitle {
         color: #999999;
@@ -58,9 +43,18 @@ section.product-list {
         font-weight: normal;
       }
 
-      .pricing {
-        color: $rgba87;
-        font-size: 1rem;
+      .card__title__wrap {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .card__title {
+          color: $color-primary;
+        }
+
+        .card__price {
+          color: $rgba87;
+        }
       }
     }
   }
