@@ -29,7 +29,6 @@ const ProductList = ({ products }) => {
                     {new Intl.NumberFormat("fr-CA", {
                       style: "currency",
                       currency: "CAD",
-                      currencyDisplay: "narrowSymbol",
                     }).format(price)}
                   </div>
                 </div>

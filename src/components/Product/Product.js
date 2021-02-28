@@ -36,7 +36,6 @@ const Product = () => {
                   {new Intl.NumberFormat("fr-CA", {
                     style: "currency",
                     currency: "CAD",
-                    currencyDisplay: "narrowSymbol",
                   }).format(product[0].price)}
                 </div>
               </div>
