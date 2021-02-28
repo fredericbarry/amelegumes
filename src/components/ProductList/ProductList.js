@@ -25,7 +25,13 @@ const ProductList = ({ products }) => {
                 <h6 className="card__subtitle">{categories[0].name}</h6>
                 <div className="card__title__wrap">
                   <h2 className="card__title">{name}</h2>
-                  <div className="card__price">{price}$</div>
+                  <div className="card__price">
+                    {new Intl.NumberFormat("fr-CA", {
+                      style: "currency",
+                      currency: "CAD",
+                      currencyDisplay: "narrowSymbol",
+                    }).format(price)}
+                  </div>
                 </div>
               </div>
             </Link>
