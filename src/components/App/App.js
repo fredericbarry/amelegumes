@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 import React from "react";
 
@@ -19,9 +24,10 @@ const App = () => {
           <Route exact path="/boutique">
             <Products />
           </Route>
-          <Route path="/boutique/semis-tomates/:slug">
+          <Route path={"/boutique/semis-tomates/:slug"}>
             <Product />
           </Route>
+          <Redirect to="/" />
         </Switch>
       </main>
     </Router>
