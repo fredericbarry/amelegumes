@@ -7,9 +7,14 @@ const ProductList = ({ products }) => {
     <section className="product-list">
       <div className="grid">
         {products.map((product) => {
-          const { id, name, slug, images, price } = product;
+          //console.log(product);
+          const { id, name, slug, categories, images, price } = product;
           return (
-            <Link to={`produit/semis/${slug}`} key={id} className="card">
+            <Link
+              to={`boutique/${categories[0].slug}/${slug}`}
+              key={id}
+              className="card"
+            >
               <img
                 className="card__media"
                 alt={name}
@@ -17,11 +22,11 @@ const ProductList = ({ products }) => {
                 loading="lazy"
               />
               <div className="card__content">
-                <h2 className="card__title">{name}</h2>
-              </div>
-              <div className="card__meta">
-                <h6 className="card__subtitle">Semis</h6>
-                <div className="pricing">{price}$</div>
+                <h6 className="card__subtitle">{categories[0].name}</h6>
+                <div className="card__title__wrap">
+                  <h2 className="card__title">{name}</h2>
+                  <div className="card__price">{price}$</div>
+                </div>
               </div>
             </Link>
           );
