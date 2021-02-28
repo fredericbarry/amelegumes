@@ -30,9 +30,7 @@ const Product = () => {
                 __html: product[0].description,
               }}
             ></div>
-            <div className="meta">
-              <div className="pricing">Semis : {product[0].price}$ ch.</div>
-            </div>
+            <div className="product__price">{product[0].price}$</div>
           </div>
         </article>
       )}
