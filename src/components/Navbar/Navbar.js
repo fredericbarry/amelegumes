@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import Brand from "../Brand/Brand";
 
-import "./NavigationBar.scss";
+import "./Navbar.scss";
 
 const Navbar = () => {
   return (
