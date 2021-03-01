@@ -31,7 +31,7 @@ const Product = () => {
                 {product[0].categories[0].name}
               </h6>
               <div className="product__name__wrap">
-                <h2 className="product__name">{product[0].name}</h2>
+                <h1 className="product__name">{product[0].name}</h1>
                 <div className="product__price">
                   {new Intl.NumberFormat("fr-CA", {
                     style: "currency",
