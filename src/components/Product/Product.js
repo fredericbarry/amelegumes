@@ -31,18 +31,21 @@ const Product = () => {
               <h6 className="product__category">
                 {product[0].categories[0].name}
               </h6>
-              <div className="product__name__wrap">
-                <h1 className="product__name">{product[0].name}</h1>
-                <div className="product__price">
-                  <Price price={product[0].price} />
-                </div>
-              </div>
+              <h1 className="product__name">{product[0].name}</h1>
               <div
                 className="product__description"
                 dangerouslySetInnerHTML={{
                   __html: product[0].description,
                 }}
               ></div>
+              <div className="product__price">
+                {product[0].price && product[0].stock_status == "instock" && (
+                  <Price price={product[0].price} />
+                )}
+                {product[0].stock_status == "outofstock" && (
+                  <div>En rupture de stock</div>
+                )}
+              </div>
             </div>
           </article>
         </div>
