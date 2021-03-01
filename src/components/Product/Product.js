@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../useFetch";
 
 import Loader from "../Loader/Loader";
+import Price from "../Price/Price";
 
 import "./Product.scss";
 
@@ -33,10 +34,7 @@ const Product = () => {
               <div className="product__name__wrap">
                 <h1 className="product__name">{product[0].name}</h1>
                 <div className="product__price">
-                  {new Intl.NumberFormat("fr-CA", {
-                    style: "currency",
-                    currency: "CAD",
-                  }).format(product[0].price)}
+                  <Price price={product[0].price} />
                 </div>
               </div>
               <div
