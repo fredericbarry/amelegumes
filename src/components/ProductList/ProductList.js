@@ -35,7 +35,7 @@ const ProductList = ({ products }) => {
                 <h6 className="card__subtitle">{categories[0].name}</h6>
                 <div className="card__title__wrap">
                   <h2 className="card__title">{name}</h2>
-                  {price && stock_status == "instock" && (
+                  {price && stock_status === "instock" && (
                     <div className="card__price">
                       <Price price={price} />
                     </div>
