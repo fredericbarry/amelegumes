@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import Price from "../Price/Price";
+
 import "./ProductList.scss";
 
 const ProductList = ({ products }) => {
@@ -8,7 +10,15 @@ const ProductList = ({ products }) => {
       <div className="grid">
         {products.map((product) => {
           //console.log(product);
-          const { id, name, slug, categories, images, price } = product;
+          const {
+            id,
+            name,
+            slug,
+            categories,
+            images,
+            price,
+            stock_status,
+          } = product;
           return (
             <Link
               to={`boutique/${categories[0].slug}/${slug}`}
@@ -25,12 +35,11 @@ const ProductList = ({ products }) => {
                 <h6 className="card__subtitle">{categories[0].name}</h6>
                 <div className="card__title__wrap">
                   <h2 className="card__title">{name}</h2>
-                  <div className="card__price">
-                    {new Intl.NumberFormat("fr-CA", {
-                      style: "currency",
-                      currency: "CAD",
-                    }).format(price)}
-                  </div>
+                  {price && stock_status == "instock" && (
+                    <div className="card__price">
+                      <Price price={price} />
+                    </div>
+                  )}
                 </div>
               </div>
             </Link>

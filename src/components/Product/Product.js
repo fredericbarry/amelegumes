@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "../useFetch";
 
 import Loader from "../Loader/Loader";
+import Price from "../Price/Price";
 
 import "./Product.scss";
 
@@ -30,21 +31,21 @@ const Product = () => {
               <h6 className="product__category">
                 {product[0].categories[0].name}
               </h6>
-              <div className="product__name__wrap">
-                <h1 className="product__name">{product[0].name}</h1>
-                <div className="product__price">
-                  {new Intl.NumberFormat("fr-CA", {
-                    style: "currency",
-                    currency: "CAD",
-                  }).format(product[0].price)}
-                </div>
-              </div>
+              <h1 className="product__name">{product[0].name}</h1>
               <div
                 className="product__description"
                 dangerouslySetInnerHTML={{
                   __html: product[0].description,
                 }}
               ></div>
+              <div className="product__price">
+                {product[0].price && product[0].stock_status == "instock" && (
+                  <Price price={product[0].price} />
+                )}
+                {product[0].stock_status == "outofstock" && (
+                  <div>En rupture de stock</div>
+                )}
+              </div>
             </div>
           </article>
         </div>

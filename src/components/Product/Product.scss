@@ -22,23 +22,17 @@
       font-weight: normal;
     }
 
-    .product__name__wrap {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-
-      .product__name {
-        color: $color-primary;
-      }
-
-      .product__price {
-        color: $rgba87;
-        font-size: 1.5rem;
-      }
+    .product__name {
+      color: $color-primary;
     }
 
     .product__description {
       padding: 1rem 0;
+    }
+
+    .product__price {
+      color: $rgba87;
+      font-size: 1.5rem;
     }
   }
 }
