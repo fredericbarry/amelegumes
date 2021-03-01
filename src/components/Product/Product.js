@@ -10,9 +10,9 @@ const Product = () => {
   const { isFetching, error, response: product } = useFetch(
     "wp-json/wc/v3/products?status=publish&slug=" + slug
   );
-  if (product) {
-    console.log(product);
-  }
+  //  if (product) {
+  //    console.log(product);
+  //  }
   return (
     <>
       {error && <div>{error}</div>}
