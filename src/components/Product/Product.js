@@ -39,10 +39,10 @@ const Product = () => {
                 }}
               ></div>
               <div className="product__price">
-                {product[0].price && product[0].stock_status == "instock" && (
+                {product[0].price && product[0].stock_status === "instock" && (
                   <Price price={product[0].price} />
                 )}
-                {product[0].stock_status == "outofstock" && (
+                {product[0].stock_status === "outofstock" && (
                   <div>En rupture de stock</div>
                 )}
               </div>
