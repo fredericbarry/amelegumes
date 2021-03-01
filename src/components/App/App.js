@@ -8,14 +8,14 @@ import {
 import React from "react";
 
 import Hero from "../Hero/Hero";
-import NavigationBar from "../NavigationBar/NavigationBar";
+import Navbar from "../Navbar/Navbar";
 import Product from "../Product/Product";
 import Products from "../Products/Products";
 
 const App = () => {
   return (
     <Router>
-      <NavigationBar />
+      <Navbar />
       <main>
         <Switch>
           <Route exact path="/">

@@ -1,48 +1,43 @@
 @import "../../variables.scss";
 
-nav.navigation-bar {
+.navbar {
   background-color: $color-primary;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   color: $white;
 
-  position: fixed;
-  left: 0;
-  right: 0;
+  position: sticky;
   top: 0;
 
-  .container {
+  .navbar__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
   }
 
-  a {
+  .navbar__brand {
     color: $white;
   }
 
-  svg {
+  .navbar__brand svg {
     height: 2rem;
     vertical-align: top;
   }
 
-  ul {
+  .navbar__links {
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  li a {
+  .navbar__link {
+    color: $white;
     border: 0.063rem solid transparent;
     border-radius: 0.25rem;
     margin: 0.25rem 0.5rem;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
   }
-}
-
-.navigation-bar-padding {
-  padding-top: 3rem;
 }
