@@ -6,24 +6,21 @@ import "./NavigationBar.scss";
 
 const Navbar = () => {
   return (
-    <>
-      <nav className="navigation-bar">
-        <div className="container">
-          <Link to="/">
-            <Brand />
-          </Link>
-          <ul>
-            <li>
-              <Link to="/">Accueil</Link>
-            </li>
-            <li>
-              <Link to="/boutique">Boutique</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div className="navigation-bar-padding"></div>
-    </>
+    <nav className="navigation-bar">
+      <div className="container">
+        <Link to="/">
+          <Brand />
+        </Link>
+        <ul>
+          <li>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li>
+            <Link to="/boutique">Boutique</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
