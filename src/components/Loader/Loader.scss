@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
 
-  .icon {
+  .loader__icon {
     animation: spin 1s linear infinite;
 
     border: 16px solid $grey-dark;
