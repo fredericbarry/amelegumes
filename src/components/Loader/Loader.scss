@@ -2,19 +2,19 @@
 
 .loader {
   display: flex;
+  align-items: center;
   justify-content: center;
+  min-height: calc(100vh - 3rem);
 
   .loader__icon {
     animation: spin 1s linear infinite;
 
-    border: 16px solid $grey-dark;
+    border: 1rem solid $grey-dark;
     border-radius: 50%;
-    border-top: 16px solid $color-primary;
+    border-top: 1rem solid $color-primary;
 
-    margin: 2em;
-
-    height: 120px;
-    width: 120px;
+    height: 7.5rem;
+    width: 7.5rem;
 
     @keyframes spin {
       100% {
