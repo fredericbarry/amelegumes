@@ -53,7 +53,6 @@
   .product {
     flex-direction: row;
     align-items: flex-start;
-    padding: 1rem;
     max-width: 1024px;
 
     .product__image {
@@ -66,5 +65,19 @@
       flex: 1;
       padding: 0 1rem;
     }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .product {
+    padding: 1rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .product {
+    padding: 2rem;
   }
 }
