@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import Price from "../Price/Price";
+
 import "./ProductList.scss";
 
 const ProductList = ({ products }) => {
@@ -26,10 +28,7 @@ const ProductList = ({ products }) => {
                 <div className="card__title__wrap">
                   <h2 className="card__title">{name}</h2>
                   <div className="card__price">
-                    {new Intl.NumberFormat("fr-CA", {
-                      style: "currency",
-                      currency: "CAD",
-                    }).format(price)}
+                    <Price price={price} />
                   </div>
                 </div>
               </div>
