@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Hero.scss";
 
 import Brand from "../Brand/Brand";

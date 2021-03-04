@@ -1,5 +1,3 @@
-import React from "react";
-
 const Brand = () => {
   return (
     <svg fill="currentColor" role="img" viewBox="0 0 132.29 29.2">

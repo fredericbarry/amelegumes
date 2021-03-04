@@ -1,5 +1,3 @@
-import React from "react";
-
 import IconSearch from "../../icons/IconSearch";
 
 import "./SearchBox.scss";
