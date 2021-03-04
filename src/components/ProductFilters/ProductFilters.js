@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./ProductFilters.scss";
 
 const ProductFilters = (props) => {

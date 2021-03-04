@@ -1,5 +1,3 @@
-import React from "react";
-
 const IconTimes = (props) => {
   return (
     <svg viewBox="0 0 352 512">

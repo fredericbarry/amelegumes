@@ -5,8 +5,6 @@ import {
   Switch,
 } from "react-router-dom";
 
-import React from "react";
-
 import Hero from "../Hero/Hero";
 import Navbar from "../Navbar/Navbar";
 import Product from "../Product/Product";
